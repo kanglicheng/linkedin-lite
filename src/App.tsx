@@ -1,24 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import "./App.css";
+import { UserDisplay } from "./UserDisplay";
+const API_URL = "https://randomuser.me/api?results=10";
+
+interface Name {
+  title: string;
+  first: string;
+  last: string;
+}
+
+interface Login {
+  uuid: string;
+  username: string;
+}
+interface User {
+  gender: string;
+  email: string;
+  name: Name;
+  login: Login;
+}
 
 function App() {
+  const [users, setUsers] = React.useState<User[]>([]);
+
+  React.useEffect(() => {
+    async function getUsers() {
+      const response = await fetch(API_URL);
+      const data = await response.json();
+      setUsers(data.results);
+    }
+    getUsers();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <h1>Linkedin Lite</h1>
       </header>
+      <div>
+        {users.map((user) => (
+          <UserDisplay
+            firstName={user.name.first}
+            lastName={user.name.last}
+            userID={user.login.uuid}
+            key={user.login.uuid}
+          />
+        ))}
+      </div>
     </div>
   );
 }
