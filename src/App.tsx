@@ -34,16 +34,15 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div style={{ textAlign: "center" }}>
       <header>
         <h1>Linkedin Lite</h1>
       </header>
-      <div>
+      <div style={{ margin: "0 auto", width: "60%" }}>
         {users.map((user) => (
           <UserDisplay
             firstName={user.name.first}
             lastName={user.name.last}
-            userID={user.login.uuid}
             key={user.login.uuid}
           />
         ))}
