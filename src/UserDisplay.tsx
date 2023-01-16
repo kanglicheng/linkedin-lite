@@ -3,27 +3,19 @@ import React from "react";
 interface UserDisplayProps {
   firstName: string;
   lastName: string;
+  uuid: string;
+  likes: number;
+  celebrates: number;
+  handleClick: (buttonName: string, uuid: string) => void;
 }
-export const UserDisplay = ({ firstName, lastName }: UserDisplayProps) => {
-  const [interactions, setInteractions] = React.useState({
-    likes: 0,
-    celebrates: 0,
-  });
-
-  const handleClick: React.MouseEventHandler<HTMLButtonElement> = (e): void => {
-    const button = e.target as HTMLButtonElement;
-    const buttonName = button.name;
-    if (buttonName === "like") {
-      setInteractions((prev) => {
-        return { celebrates: 0, likes: prev.likes + 1 };
-      });
-    } else if (buttonName === "celebrate") {
-      setInteractions((prev) => {
-        return { celebrates: prev.celebrates + 1, likes: 0 };
-      });
-    }
-  };
-
+export const UserDisplay = ({
+  firstName,
+  lastName,
+  likes,
+  uuid,
+  celebrates,
+  handleClick,
+}: UserDisplayProps) => {
   const userRowStyle = {
     display: "flex",
     justifyContent: "space-between",
@@ -44,9 +36,12 @@ export const UserDisplay = ({ firstName, lastName }: UserDisplayProps) => {
           }}
           type="button"
           name="like"
-          onClick={handleClick}
+          onClick={(e) => {
+            const button = e.target as HTMLButtonElement;
+            handleClick(button.name, uuid);
+          }}
         >
-          Like {interactions.likes}
+          Like {likes}
         </button>
         <button
           style={{
@@ -56,9 +51,12 @@ export const UserDisplay = ({ firstName, lastName }: UserDisplayProps) => {
           }}
           type="button"
           name="celebrate"
-          onClick={handleClick}
+          onClick={(e) => {
+            const button = e.target as HTMLButtonElement;
+            handleClick(button.name, uuid);
+          }}
         >
-          Celebrate {interactions.celebrates}
+          Celebrate {celebrates}
         </button>
       </div>
     </div>
