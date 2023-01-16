@@ -1,9 +1,10 @@
 # Linkedin Lite
 
-This is a very simple React and TypeScript application that demonstrates how to fetch data from an API, display the data in a useful way, and support some basic user interactions.
+This is a very simple React and TypeScript application that demonstrates how to fetch data from an API, display the data in a useful way, and support some basic user interactions. Clicking on the like or celebrate button increments the respective counts but a user can only have 'likes' OR 'celebrates' but not both at any given time. 
 
 - ![img1](https://github.com/kanglicheng/linkedin-lite/blob/main/images/LI-lite-1.png)
 - ![img2](https://github.com/kanglicheng/linkedin-lite/blob/main/images/LI-lite-2.png)
+
 
 # Getting Started with Create React App
 
