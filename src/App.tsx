@@ -1,4 +1,5 @@
 import React from "react";
+import { inject } from "@vercel/analytics";
 
 import "./App.css";
 import { UserDisplay } from "./UserDisplay";
@@ -75,6 +76,7 @@ function App() {
     () => getHighestUser("celebrates", users),
     [users]
   );
+  inject();
 
   return (
     <div style={{ textAlign: "center" }}>
