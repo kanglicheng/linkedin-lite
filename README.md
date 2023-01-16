@@ -2,6 +2,9 @@
 
 This is a very simple React and TypeScript application that demonstrates how to fetch data from an API, display the data in a useful way, and support some basic user interactions.
 
+[img1](https://github.com/kanglicheng/linkedin-lite/blob/main/images/LI-lite-1.png)
+[img2](https://github.com/kanglicheng/linkedin-lite/blob/main/images/LI-lite-2.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
