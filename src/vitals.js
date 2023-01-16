@@ -38,4 +38,3 @@ export function sendToVercelAnalytics(metric) {
       keepalive: true,
     });
 }
-Footer;
