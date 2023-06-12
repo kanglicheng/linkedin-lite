@@ -56,11 +56,13 @@ function App() {
           <Text>
             <em>Anish Shah </em>is currently a quantitative trader at <Link color='teal.500' href="https://www.mlp.com/">Millennium </Link> in Manhattan. 
             Previously he worked in quantitative research at Goldman Sachs and earned a Masters degree in quantitative finance (MSCF) from Carnegie Mellon 
-            University. 
+            University. Anish has interviewed over one hundred candidates for the Strats role while employed at Goldman. He has also interviewed with over forty
+            buy-side firms and top investment banks and as a result has deep and extensive knowledge of interviews in the financial industry.
           </Text>
           <Text>
-            <em>Stephen Cheng</em> is currently a Vice President of Technology at <Link color='teal.500' href="https://www.jpmorganchase.com/">JPMorgan and Chase.</Link> Previously 
-            he worked at Uber and Microsoft respectively.
+            <em>Stephen Cheng</em> is currently a Vice President of Technology at <Link color='teal.500' href="https://www.jpmorganchase.com/">JPMorgan and Chase.</Link> 
+            In the past, Stephen has worked at Uber and Microsoft as a software engineer. Stephen has also mentored three individuals who are now all employed at top technology companies.
+            He has interviewed with over 50 top technology companies, hedge funds, and investment banks for the role of software engineer.
           </Text>
 
         </VStack>
