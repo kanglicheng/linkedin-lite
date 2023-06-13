@@ -88,6 +88,7 @@ function App() {
           We have noticed that one of the biggest differentiator in job 
           search success is having access to <em>quality mock interviews.</em> We offer mock interviews that closely simulate the actual process and we take time 
           to give detailed and actionable feedback, including but not limited to customized study plans and suggested reading. We are also always happy to provide informal mentorship.
+          We charge for mock interviews, $100-$130 per session because they require extensive commitment on our part. 
         </Text>
         <Heading as='h4' size="sm" style={{marginTop: "5px"}}>
           Our Process
@@ -110,20 +111,20 @@ function App() {
         </Heading>
         <VStack spacing="2em" sx={{marginTop: "10px"}}>
           <Text>
-            <em><b>Anish Shah</b> </em> <Link href={"https://www.linkedin.com/in/anishshah500/"}><Icon as={FaLinkedin}/></Link> is currently a quantitative trader at <Link color='teal.500' href="https://www.mlp.com/">Millennium </Link> in Manhattan. 
+            <em><b>Anish Shah</b> </em> <Link color='teal.600' href={"https://www.linkedin.com/in/anishshah500/"}><Icon as={FaLinkedin}/></Link> is currently a quantitative trader at <Link color='teal.600' href="https://www.mlp.com/">Millennium </Link> in Manhattan. 
             Previously he worked in quantitative research at Goldman Sachs and earned a Masters degree in quantitative finance (MSCF) from Carnegie Mellon 
             University. Anish has interviewed over one hundred candidates for the Strats role while employed at Goldman. He has also interviewed with over forty
             buy-side firms and top investment banks and as a result has deep and extensive knowledge of interviews in the financial industry. 
           
           </Text>
           <Text>
-            <em><b>Stephen Cheng</b></em> <Link href={"https://www.linkedin.com/in/kanglicheng/"}><Icon as={FaLinkedin}/></Link> is currently a Vice President of Technology at <Link color='teal.500' href="https://www.jpmorganchase.com/">JPMorgan and Chase. </Link> 
+            <em><b>Stephen Cheng</b></em> <Link color='teal.600' href={"https://www.linkedin.com/in/kanglicheng/"}><Icon as={FaLinkedin}/></Link> is currently a Vice President of Technology at <Link color='teal.600' href="https://www.jpmorganchase.com/">JPMorgan and Chase. </Link> 
             In the past, Stephen has worked at Uber and Microsoft as a software engineer. Stephen has also mentored over a dozen individuals over the course of 6 months to a year 
             and his mentees are now all employed at top technology companies.
             He has interviewed with over 50 top technology companies, hedge funds, and investment banks for the role of software engineer.
           </Text>
           <Text>
-            <em><b>Peter Scagnelli</b></em> is current a machine learning engineer at <Link color='teal.500' href="https://aws.amazon.com/">AWS Amazon. </Link> He has mentored over twenty individuals to help them
+            <em><b>Peter Scagnelli</b></em> is current a machine learning engineer at <Link color='teal.600' href="https://aws.amazon.com/">AWS Amazon. </Link> He has mentored over twenty individuals to help them
             obtain roles at top companies, including Google, Meta, Citadel, and IMC. He is a skilled negotiator and gives the toughest but also most helpful 
             mock behavioral interviews.
           </Text>
