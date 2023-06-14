@@ -66,12 +66,12 @@ function App() {
     <ChakraProvider>
 
     <Flex direction="column" align={"center"} style={boxStyles}>
-      <Heading as='h3' size='lg' noOfLines={1}>
-      Quantitative Finance and Technology Interview Preparation
+      <Heading as='h1' size='lg' noOfLines={1}>
+      Quant Finance and Tech Interview Preparation
      </Heading>
 
       <Flex direction={"column"} align={"center"}>
-        <Heading as='h4' size="md">
+        <Heading as='h3' size="md">
           About QFIN Interviews
         </Heading>
         <Text>
