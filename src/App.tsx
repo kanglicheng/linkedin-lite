@@ -1,4 +1,4 @@
-import { Box, Button, ChakraProvider, Checkbox, Container, FormControl, FormLabel, Grid, Heading, Icon, Input, Link, ListItem, OrderedList, Text, VStack } from '@chakra-ui/react';
+import { Button, ChakraProvider, Checkbox, Container, Flex, FormControl, FormLabel, Grid, Heading, Icon, Input, Link, ListItem, OrderedList, Text, VStack } from '@chakra-ui/react';
 import React from "react";
 
 import { createClient } from '@supabase/supabase-js';
@@ -35,7 +35,7 @@ function App() {
   }
 
   const boxStyles = {
-    margin: "10px"
+    margin: "12px",
   }
 
   const isDisabled = React.useMemo(()=>{
@@ -65,12 +65,12 @@ function App() {
   return (
     <ChakraProvider>
 
-    <Box sx={boxStyles}>
+    <Flex direction="column" align={"center"} style={boxStyles}>
       <Heading as='h3' size='lg' noOfLines={1}>
       Quantitative Finance and Technology Interview Preparation
      </Heading>
 
-      <Container sx={{margin: "10px"}}>
+      <Flex direction={"column"} align={"center"}>
         <Heading as='h4' size="md">
           About QFIN Interviews
         </Heading>
@@ -129,7 +129,7 @@ function App() {
             mock behavioral interviews.
           </Text>
         </VStack>
-      </Container>
+      </Flex>
       <Container>
       <Heading as='h4' size="md" style={{marginTop: "10px"}}>
         Apply to work with us
@@ -175,7 +175,7 @@ function App() {
             Submit
           </Button>
       </Container>
-    </Box>
+    </Flex>
     </ChakraProvider>
   );
 }
