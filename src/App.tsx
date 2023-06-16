@@ -1,4 +1,4 @@
-import { Button, ChakraProvider, Checkbox, Container, Flex, FormControl, FormLabel, Grid, Heading, Icon, Input, Link, ListItem, OrderedList, Text, VStack } from '@chakra-ui/react';
+import { Button, Card, CardBody, CardHeader, ChakraProvider, Checkbox, Container, Flex, FormControl, FormLabel, Grid, Heading, Icon, Input, Link, ListItem, OrderedList, Text, VStack } from '@chakra-ui/react';
 import React from "react";
 
 import { createClient } from '@supabase/supabase-js';
@@ -66,12 +66,12 @@ function App() {
     <ChakraProvider>
 
     <Flex direction="column" align={"center"} style={boxStyles}>
-      <Heading as='h1' size='lg' noOfLines={1}>
+      <Heading as='h1' size='lg' noOfLines={1} style={{marginBottom: "15px"}}>
       Quant Finance and Tech Interview Preparation
      </Heading>
 
       <Flex direction={"column"} align={"center"}>
-        <Heading as='h3' size="md">
+        <Heading as='h3' size="md" style={{marginBottom: "5px"}}>
           About QFIN Interviews
         </Heading>
         <Text>
@@ -81,21 +81,27 @@ function App() {
           we work mainly with new graduates and professionals with less than ~3 years of experience.
         </Text>
 
-        <Heading as='h4' size="sm" style={{marginTop: "5px"}}>
+        <Heading as='h4' size="sm" style={{marginTop: "5px", marginBottom: "5px"}}>
           What We Offer
         </Heading>
         <Text>
-          We have noticed that one of the biggest differentiator in job 
-          search success is having access to <em>quality mock interviews.</em> We offer mock interviews that closely simulate the actual process and we take time 
+          Most candidates going for technical interviews understand that they need to prepare in advance, by
+          by refreshing basic concepts and working through sample interview problems. There are many great websites 
+          out there for doing practice coding problems and for math and finance questions there are many excellent interview prep books.
+          Beyond being prepared with the relevant material, we have noticed that one of the <em><strong>biggest differentiators</strong></em> in job 
+          search success is having access to <em><strong>quality mock interviews.</strong></em> We have seen so many well-prepared candidates 
+          stumble during an actual interview, due to lack of prior interview experience. To remedy this, we offer mock interviews that closely simulate the actual process and we take time 
           to give detailed and actionable feedback, including but not limited to customized study plans and suggested reading. We are also always happy to provide informal mentorship.
           We charge for mock interviews, $100-$130 per session because they require extensive commitment on our part. 
         </Text>
-        <Heading as='h4' size="sm" style={{marginTop: "5px"}}>
-          Our Process
-        </Heading>
-        <Text>
-        </Text>
-        <OrderedList>
+        <Card maxW={"sm"}>
+        <CardHeader>
+          <Heading as='h4' size="sm">
+            Our Process
+          </Heading>
+        </CardHeader>
+        <CardBody>
+          <OrderedList>
           <ListItem>Fill out an application below</ListItem>
           <ListItem>Set up a 30 minute phone call to discuss background and career aspirations</ListItem>
           <ListItem>Intense and realistic interview preparation via a series of mock interviews, tailored according to the role(s) you 
@@ -106,6 +112,10 @@ function App() {
             be available for further support.
           </ListItem>
         </OrderedList>
+        </CardBody>
+          
+        </Card>
+        
         <Heading as='h4' size="md" style={{marginTop: "10px"}}>
           About the Interviewers
         </Heading>
@@ -171,7 +181,7 @@ function App() {
             Other
           </Checkbox>
         </Grid>
-          <Button mt={4} colorScheme='teal' type={"submit"} onClick={(e)=>insertLead()} isDisabled={isDisabled}>
+          <Button variant={"solid"} mt={4} colorScheme='teal' type={"submit"} onClick={(e)=>insertLead()} isDisabled={isDisabled}>
             Submit
           </Button>
       </Container>
