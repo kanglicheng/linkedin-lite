@@ -4,10 +4,11 @@ import React from "react";
 import { createClient } from '@supabase/supabase-js';
 import { FaLinkedin } from "react-icons/fa";
 import "./App.css";
+import { Leads } from './Leads';
 
 const supabaseUrl = process.env.REACT_APP_SUPABASE_URL
 const supabaseKey = process.env.REACT_APP_SUPABASE_KEY
-const supabase = createClient(supabaseUrl, supabaseKey)
+export const supabase = createClient(supabaseUrl, supabaseKey)
 
 function App() {
 
@@ -60,6 +61,11 @@ function App() {
       setLinkedin('')
       setCheckedItems(new Set());
     }
+  }
+
+  const pathName = window.location.pathname;
+  if(pathName === '/leads'){
+    return <Leads/>
   }
 
   return (
