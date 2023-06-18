@@ -24,6 +24,7 @@ export const Leads = () => {
                 <th>email</th>
                 <th>linkedin</th>
                 <th>roles</th>
+                <th>date signed up</th>
                 </tr>
                     
                 </thead>
@@ -36,6 +37,7 @@ export const Leads = () => {
                         <td>{lead.email}</td>
                         <td>{lead.linkedin || "None provided"}</td>
                         <td>{lead.roles}</td>
+                        <td>{lead.created_at}</td>
                     </tr>
                    
                 ))}   
